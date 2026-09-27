@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width,
+               initial-scale=1.0,
+               maximum-scale=1.0,
+               viewport-fit=cover">
+
+<meta name="theme-color" content="#12030c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<title>Pour Élise ❤️</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    width:100%;
+    min-height:100vh;
+    min-height:100dvh;
+    overflow:hidden;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    background:#10030b;
+    color:white;
+}
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root{
+    --pink:#ff4f91;
+    --light-pink:#ffb4d0;
+    --soft-pink:#ffdce9;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page{
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100dvh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.77,0,.18,1);
+}
+
+
+/* =====================================================
+   ACCUEIL
+===================================================== */
+
+#home{
+
+    z-index:10;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255,72,143,.25),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(255,50,130,.12),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            145deg,
+            #090107,
+            #260816 50%,
+            #080106
+        );
+}
+
+
+/* =====================================================
+   LUMIÈRES
+===================================================== */
+
+.light{
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,64,143,.22),
+            transparent 70%
+        );
+
+    filter:blur(25px);
+
+    animation:
+        lightMove 8s ease-in-out infinite alternate;
+}
+
+.light1{
+    top:-130px;
+    left:-100px;
+}
+
+.light2{
+    bottom:-130px;
+    right:-100px;
+    animation-delay:2s;
+}
+
+@keyframes lightMove{
+
+    from{
+        transform:scale(.8);
+        opacity:.5;
+    }
+
+    to{
+        transform:scale(1.25);
+        opacity:1;
+    }
+}
+
+
+/* =====================================================
+   ÉTOILES
+===================================================== */
+
+.stars{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+}
+
+.star{
+
+    position:absolute;
+
+    color:#ffd6e5;
+
+    opacity:.5;
+
+    animation:
+        twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.15;
+        transform:scale(.7);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.2);
+    }
+}
+
+
+/* =====================================================
+   CONTENU ACCUEIL
+===================================================== */
+
+.home-content{
+
+    width:min(92%,700px);
+
+    text-align:center;
+
+    position:relative;
+    z-index:5;
+
+    padding:30px;
+}
+
+
+.label{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:#ffc9dc;
+
+    font-size:.75rem;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+
+    backdrop-filter:blur(10px);
+}
+
+
+.big-heart{
+
+    font-size:58px;
+
+    margin-bottom:18px;
+
+    filter:
+        drop-shadow(
+            0 10px 25px
+            rgba(255,50,130,.35)
+        );
+
+    animation:
+        heartbeat 1.6s infinite;
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    15%{
+        transform:scale(1.18);
+    }
+
+    30%{
+        transform:scale(1);
+    }
+
+    45%{
+        transform:scale(1.12);
+    }
+}
+
+
+.home-title{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(2.6rem,9vw,5.5rem);
+
+    line-height:1;
+
+    font-weight:400;
+
+    letter-spacing:-2px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #fff,
+            #ffb0cd,
+            #fff,
+            #ff7faf
+        );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+
+    animation:
+        titleShine 7s linear infinite;
+}
+
+@keyframes titleShine{
+
+    to{
+        background-position:300%;
+    }
+}
+
+
+.home-subtitle{
+
+    max-width:520px;
+
+    margin:25px auto 0;
+
+    color:#eecbd9;
+
+    font-size:
+        clamp(.95rem,3.5vw,1.15rem);
+
+    line-height:1.7;
+}
+
+
+/* =====================================================
+   BOUTON
+===================================================== */
+
+.open-button{
+
+    position:relative;
+
+    margin-top:38px;
+
+    border:0;
+
+    padding:0;
+
+    background:none;
+
+    cursor:pointer;
+
+    color:white;
+
+    transition:.3s;
+}
+
+.button-box{
+
+    min-width:270px;
+
+    padding:17px 28px;
+
+    border-radius:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff347f,
+            #ff79ad
+        );
+
+    box-shadow:
+
+        0 15px 40px
+        rgba(255,44,126,.30),
+
+        inset 0 1px
+        rgba(255,255,255,.45);
+
+    font-weight:700;
+
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+.open-button:hover .button-box{
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+
+        0 22px 55px
+        rgba(255,44,126,.42),
+
+        inset 0 1px
+        rgba(255,255,255,.5);
+}
+
+.open-button:active .button-box{
+    transform:scale(.95);
+}
+
+.envelope-icon{
+    font-size:24px;
+}
+
+
+/* =====================================================
+   PAGE MESSAGE
+===================================================== */
+
+#messagePage{
+
+    z-index:20;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateX(100%);
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255,63,139,.20),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            145deg,
+            #090107,
+            #220712,
+            #080106
+        );
+
+    overflow-y:auto;
+
+    align-items:flex-start;
+}
+
+#messagePage.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateX(0);
+}
+
+#home.hide{
+
+    opacity:0;
+
+    transform:translateX(-100%);
+
+    pointer-events:none;
+}
+
+
+/* =====================================================
+   CONTENEUR MESSAGE
+===================================================== */
+
+.message-container{
+
+    position:relative;
+
+    width:min(94%,850px);
+
+    padding:
+        55px 0 80px;
+
+    z-index:10;
+}
+
+
+/* =====================================================
+   TITRE MESSAGE
+===================================================== */
+
+.message-top{
+
+    text-align:center;
+
+    margin-bottom:25px;
+}
+
+.message-top .flower-symbol{
+
+    font-size:48px;
+
+    animation:
+        softFloat 3s ease-in-out infinite;
+}
+
+@keyframes softFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+.message-top h2{
+
+    margin-top:10px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(2rem,7vw,3.4rem);
+
+    font-weight:400;
+
+    color:#ffb6d1;
+}
+
+.message-top p{
+
+    margin-top:8px;
+
+    color:#d9a9bc;
+
+    font-size:.9rem;
+
+    letter-spacing:.5px;
+}
+
+
+/* =====================================================
+   LETTRE
+===================================================== */
+
+.letter{
+
+    position:relative;
+
+    padding:
+        clamp(27px,6vw,60px);
+
+    border-radius:32px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.10),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    box-shadow:
+
+        0 35px 100px
+        rgba(0,0,0,.55),
+
+        inset 0 1px
+        rgba(255,255,255,.12);
+
+    backdrop-filter:
+        blur(25px);
+
+    -webkit-backdrop-filter:
+        blur(25px);
+}
+
+
+.letter::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:10%;
+    right:10%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,150,190,.6),
+            transparent
+        );
+}
+
+
+/* =====================================================
+   TEXTE
+===================================================== */
+
+.message-text{
+
+    color:#fff0f6;
+
+    font-size:
+        clamp(1rem,2.5vw,1.13rem);
+
+    line-height:1.9;
+}
+
+.message-text p{
+    margin-bottom:25px;
+}
+
+.message-text strong{
+
+    color:#ffaccb;
+
+    font-weight:700;
+}
+
+
+.message-text .opening{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(1.35rem,4vw,1.7rem);
+
+    color:#ffb4d0;
+
+    line-height:1.5;
+
+    text-align:center;
+
+    margin-bottom:35px;
+}
+
+
+/* =====================================================
+   SIGNATURE PRINCIPALE
+===================================================== */
+
+.signature{
+
+    text-align:center;
+
+    padding-top:28px;
+
+    margin-top:25px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.10);
+
+    color:#ffabc9;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(1.3rem,5vw,1.8rem);
+
+    font-style:italic;
+}
+
+
+/* =====================================================
+   SIGNATURE SKM / MADA
+===================================================== */
+
+.final-signature{
+
+    margin-top:18px;
+
+    text-align:center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(1.15rem,4vw,1.45rem);
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    color:#ffffff;
+
+    text-shadow:
+        0 0 12px
+        rgba(255,130,180,.45);
+}
+
+.final-signature::before{
+
+    content:"♡";
+
+    margin-right:8px;
+
+    color:#ff78ad;
+}
+
+.final-signature::after{
+
+    content:"♡";
+
+    margin-left:8px;
+
+    color:#ff78ad;
+}
+
+
+/* =====================================================
+   BOUTON RETOUR
+===================================================== */
+
+.back-button{
+
+    display:block;
+
+    margin:30px auto 0;
+
+    padding:13px 25px;
+
+    border-radius:30px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:#f7dce8;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.back-button:hover{
+
+    background:
+        rgba(255,255,255,.12);
+
+    transform:translateY(-2px);
+}
+
+
+/* =====================================================
+   ANIMATIONS QUI TOMBENT
+===================================================== */
+
+#fallingItems{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:30;
+}
+
+.falling-item{
+
+    position:absolute;
+
+    top:-80px;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    animation:
+        falling linear forwards;
+
+    will-change:
+        transform,
+        opacity;
+
+    filter:
+        drop-shadow(
+            0 5px 10px
+            rgba(255,60,140,.25)
+        );
+}
+
+@keyframes falling{
+
+    0%{
+
+        transform:
+            translate3d(0,-80px,0)
+            rotate(0deg);
+
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    50%{
+
+        transform:
+            translate3d(
+                45px,
+                50vh,
+                0
+            )
+            rotate(180deg);
+    }
+
+    100%{
+
+        transform:
+            translate3d(
+                -45px,
+                115vh,
+                0
+            )
+            rotate(360deg);
+
+        opacity:.1;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    .home-content{
+        padding:25px 18px;
+    }
+
+    .label{
+
+        font-size:.65rem;
+
+        letter-spacing:2px;
+    }
+
+    .big-heart{
+        font-size:50px;
+    }
+
+    .home-title{
+        letter-spacing:-1px;
+    }
+
+    .home-subtitle{
+        line-height:1.65;
+    }
+
+    .button-box{
+
+        width:
+            min(88vw,340px);
+
+        min-height:58px;
+    }
+
+    .message-container{
+
+        width:94%;
+
+        padding:
+            35px 0 60px;
+    }
+
+    .letter{
+
+        padding:
+            28px 20px;
+
+        border-radius:25px;
+    }
+
+    .message-text{
+        line-height:1.8;
+    }
+}
+
+
+/* =====================================================
+   IPHONE SAFE AREA
+===================================================== */
+
+@supports(padding:max(0px)){
+
+    .message-container{
+
+        padding-bottom:
+            max(
+                80px,
+                env(safe-area-inset-bottom)
+            );
+    }
+}
+
+
+/* =====================================================
+   ACCESSIBILITÉ
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PAGE D'ACCUEIL
+===================================================== -->
+
+<section id="home" class="page">
+
+    <div class="light light1"></div>
+    <div class="light light2"></div>
+
+    <div class="stars" id="stars"></div>
+
+
+    <div class="home-content">
+
+        <div class="label">
+            Une petite surprise pour toi
+        </div>
+
+        <div class="big-heart">
+            ❤️
+        </div>
+
+        <h1 class="home-title">
+
+            Joyeux anniversaire<br>
+            My Heart
+
+        </h1>
+
+        <p class="home-subtitle">
+
+            Aujourd’hui est un jour particulier…
+            <br>
+
+            parce qu’une personne très spéciale
+            est née. 🥰
+
+        </p>
+
+
+        <button
+            class="open-button"
+            onclick="openMessage()">
+
+            <div class="button-box">
+
+                <span class="envelope-icon">
+                    💌
+                </span>
+
+                <span>
+                    Joyeux anniversaire<br>
+                    <small>
+                        Voir mon message
+                    </small>
+                </span>
+
+            </div>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE MESSAGE
+===================================================== -->
+
+<section id="messagePage" class="page">
+
+    <div id="fallingItems"></div>
+
+
+    <div class="message-container">
+
+
+        <div class="message-top">
+
+            <div class="flower-symbol">
+                🌹
+            </div>
+
+            <h2>
+                Joyeux anniversaire, Élise ❤️
+            </h2>
+
+            <p>
+                Quelques mots venant directement du cœur…
+            </p>
+
+        </div>
+
+
+        <article class="letter">
+
+
+            <div class="message-text">
+
+
+                <p class="opening">
+
+                    Joyeux anniversaire à toi,
+                    <strong>my heart</strong> ❤️🎂🥰
+
+                </p>
+
+
+                <p>
+
+                    Aujourd’hui, ce n’est pas seulement ton
+                    anniversaire que je célèbre, c’est aussi le
+                    jour où une personne exceptionnelle est venue
+                    au monde. Et je veux que tu saches une chose :
+                    tu es l’une des plus belles choses qui me soient
+                    arrivées dans cette vie. ❤️
+
+                </p>
+
+
+                <p>
+
+                    Depuis que tu es entrée dans ma vie, tu as
+                    apporté quelque chose que je ne saurais
+                    expliquer avec de simples mots. Ta présence,
+                    ton sourire, ta façon d’être… tout cela a une
+                    valeur énorme pour moi. 🥹❤️
+
+                </p>
+
+
+                <p>
+
+                    Je ne te promets pas une vie sans difficultés,
+                    mais je peux te promettre que, si tu me laisses
+                    une place à tes côtés, je ferai de mon mieux
+                    pour te voir heureuse, te respecter, te soutenir
+                    et te rappeler chaque jour à quel point tu
+                    comptes pour moi. ❤️
+
+                </p>
+
+
+                <p>
+
+                    En ce jour spécial, je prie pour que Dieu
+                    t’accorde une longue vie, beaucoup de bonheur,
+                    la réussite dans tout ce que tu entreprendras
+                    et, surtout, un cœur toujours rempli de joie.
+                    🙏❤️
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Joyeux anniversaire, ma Élise ❤️🎂 !
+                    </strong>
+
+                    Tu es vraiment une personne précieuse pour moi,
+                    et je suis reconnaissant de t’avoir rencontrée.
+                    🥰❤️
+
+                </p>
+
+
+            </div>
+
+
+            <div class="signature">
+
+                Avec tout mon cœur ❤️
+
+            </div>
+
+
+            <div class="final-signature">
+
+                Skm/MADA.
+
+            </div>
+
+
+        </article>
+
+
+        <button
+            class="back-button"
+            onclick="goBack()">
+
+            ← Retour
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+/* =====================================================
+   ÉTOILES
+===================================================== */
+
+function createStars(){
+
+    const container =
+        document.getElementById("stars");
+
+    for(let i=0;i<35;i++){
+
+        const star =
+            document.createElement("span");
+
+        star.className="star";
+
+        star.innerHTML =
+            Math.random() > .7
+            ? "✦"
+            : "•";
+
+        star.style.left =
+            Math.random()*100+"%";
+
+        star.style.top =
+            Math.random()*100+"%";
+
+        star.style.fontSize =
+            (5+Math.random()*9)+"px";
+
+        star.style.animationDelay =
+            Math.random()*4+"s";
+
+        container.appendChild(star);
+    }
+}
+
+createStars();
+
+
+
+/* =====================================================
+   OUVRIR LE MESSAGE
+===================================================== */
+
+function openMessage(){
+
+    const home =
+        document.getElementById("home");
+
+    const message =
+        document.getElementById("messagePage");
+
+    home.classList.add("hide");
+
+    setTimeout(()=>{
+
+        message.classList.add("active");
+
+        startFalling();
+
+    },350);
+}
+
+
+
+/* =====================================================
+   RETOUR
+===================================================== */
+
+function goBack(){
+
+    const home =
+        document.getElementById("home");
+
+    const message =
+        document.getElementById("messagePage");
+
+    message.classList.remove("active");
+
+    setTimeout(()=>{
+
+        home.classList.remove("hide");
+
+    },500);
+}
+
+
+
+/* =====================================================
+   ÉLÉMENTS QUI TOMBENT
+===================================================== */
+
+const fallingEmojis = [
+
+    "🌸",
+    "🌷",
+    "🌺",
+    "🌹",
+    "💮",
+    "🩷",
+
+    "🎂",
+    "🎉",
+    "🎊",
+    "🥳",
+
+    "❤️",
+    "💕",
+    "💖",
+    "💗",
+
+    "✨",
+    "⭐",
+    "🌟"
+
+];
+
+
+let fallingStarted = false;
+
+
+function createFallingItem(){
+
+    const item =
+        document.createElement("div");
+
+    item.className =
+        "falling-item";
+
+
+    item.innerHTML =
+        fallingEmojis[
+            Math.floor(
+                Math.random()
+                * fallingEmojis.length
+            )
+        ];
+
+
+    item.style.left =
+        Math.random()*100+"vw";
+
+
+    /* tailles différentes */
+
+    item.style.fontSize =
+        (15 + Math.random()*24)+"px";
+
+
+    /* vitesse différente */
+
+    const duration =
+        5 + Math.random()*8;
+
+    item.style.animationDuration =
+        duration+"s";
+
+
+    /* léger délai */
+
+    item.style.animationDelay =
+        Math.random()*1.5+"s";
+
+
+    document
+        .getElementById("fallingItems")
+        .appendChild(item);
+
+
+    setTimeout(()=>{
+
+        item.remove();
+
+    },(duration+3)*1000);
+}
+
+
+
+/* =====================================================
+   DÉMARRAGE DES ANIMATIONS
+===================================================== */
+
+function startFalling(){
+
+    if(fallingStarted) return;
+
+    fallingStarted = true;
+
+
+    setInterval(()=>{
+
+        createFallingItem();
+
+
+        /*
+           De temps en temps,
+           deux éléments tombent ensemble.
+        */
+
+        if(Math.random() > .45){
+
+            setTimeout(()=>{
+
+                createFallingItem();
+
+            },180);
+
+        }
+
+    },550);
+}
+
+</script>
+
+</body>
+</html>
